@@ -1,166 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reel Booster</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Signika:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      /* Custom Font */
-      @font-face {
-        font-family: "Booster";
-        src: url("Booster.ttf") format("ttf"), url("Booster.otf") format("otf");
-        font-weight: normal;
-        font-style: normal;
-      }
-      @font-face {
-        font-family: "Booster-swash";
-        src: url("Booster_swash.ttf") format("ttf"), url("Booster_swash.otf") format("otf");
-        font-weight: bold;
-        font-style: italic;
-      }
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: black;
-        color: white;
-        background: black url(reelboost2-.jpg) no-repeat center top;/*curtains.png*/
-        background-size: 100% auto;
-      }
 
-      @media (max-width:961px) {body {
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reel Booster</title>
+  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Custom Font */
+    @font-face {
+      font-family: "Booster";
+      src: url("Booster.ttf") format("ttf"), url("Booster.otf") format("otf");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "Booster-swash";
+      src: url("Booster_swash.ttf") format("ttf"), url("Booster_swash.otf") format("otf");
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+      background: black url(reelboost2-.jpg) no-repeat center top;
+      /*curtains.png*/
+      background-size: 100% auto;
+    }
+
+    @media (max-width:961px) {
+      body {
         /* tablet, landscape iPad, lo-res laptops ands desktops */
         background-size: 200% auto;
-      }}
-      header {
-        text-align: center;
       }
-      h1 {
-        margin: 0;
-        font-family: "Booster";
-        font-size: 8em;
-        transform: rotate(-10deg);
-        /* margin-top: -80px; */
-        text-shadow: 5px 5px #000;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: black;
-        -webkit-text-fill-color: white;
-      }
+    }
 
-      /* h1 > em {
+    header {
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Booster";
+      font-size: 8em;
+      transform: rotate(-10deg);
+      /* margin-top: -80px; */
+      text-shadow: 5px 5px #000;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+      -webkit-text-fill-color: white;
+    }
+
+    /* h1 > em {
         font-family: 'Booster-swash';
       } */
-      h2 {
-        margin: 0;
-        margin-top: 100px;
-        font-size: 2em;
-        font-family: "Signika";
-        font-weight: normal;
-        text-transform: uppercase;
-        text-shadow: 0px 0px 5px #000;
-      }
-      h2 strong {
-        font-size: 1.2em;
-      }
-      h3 {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 3em;
-      }
-      .container {
-        display: flex;
-        justify-content: center;
-      }
-      .column {
-        padding: 20px;
-        max-width: 400px;
-      }
-      ul {
-        list-style: none;
-        padding: 0;
-      }
-      li {
-        font-size: 1.3em;
-        margin: 10px 0;
-        text-align: center;
-      }
-      li span {
-        font-size: 3em;
-      }
-      /* li::before {
+    h2 {
+      margin: 0;
+      margin-top: 100px;
+      font-size: 2em;
+      font-family: "Signika";
+      font-weight: normal;
+      text-transform: uppercase;
+      text-shadow: 0px 0px 5px #000;
+    }
+
+    h2 strong {
+      font-size: 1.2em;
+    }
+
+    h3 {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 3em;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .column {
+      padding: 20px;
+      max-width: 400px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 1.3em;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    li span {
+      font-size: 3em;
+    }
+
+    /* li::before {
         content: "\1F44D "; /* Thumbs Up Emoji (👍) 
       } */
-      .cta-button {
-        display: inline-block;
-        margin: 10px;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        background-color: #007bff;
-        color: white;
-        cursor: pointer;
-        font-size: 1.5em;
-        font-weight: bold;
-      }
-      .cta-button:hover {
-        background-color: #0056b3;
-      }
-      h3 {
-        color: #ffc;
-        text-shadow: 0px 0px 5px #000;
-      }
-      h4 {
-        font-size: 1.6rem;
-        margin: 10px;
-      }
-      input[type=email] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border: solid 1px grey;
-  width: 300px;
-}
-form {
-  margin: 50px 20px;
-  text-align: center;
-}
-    </style>
-  </head>
-  <body>
-    <header>
-      <img src="./reelboost-logo.png" style="width: 40%; max-width: 900px; min-width: 300px; margin-top: 250px;" />
-      <!-- <h1>Reel Booster</h1> -->
-      <h2>
-        A new platform that gives <br/>
-        <em>Audiences & Filmmakers the power</em><br />
-        <strong><em>to Shape the Future of Film & TV</em></strong>
-        <!-- A NEW PLATFORM THAT GIVES POWER TO AUDIENCES & FILMMAKERS TO MAKE MOVIES
+    .cta-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
+
+    h3 {
+      color: #ffc;
+      text-shadow: 0px 0px 5px #000;
+    }
+
+    h4 {
+      font-size: 1.6rem;
+      margin: 10px;
+    }
+
+    input[type=email] {
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: solid 1px grey;
+      width: 300px;
+    }
+
+    form {
+      margin: 50px 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="./reelboost-logo.png" style="width: 40%; max-width: 900px; min-width: 300px; margin-top: 250px;" />
+    <!-- <h1>Reel Booster</h1> -->
+    <h2>
+      A new platform that gives <br />
+      <em>Audiences & Filmmakers the power</em><br />
+      <strong><em>to Shape the Future of Film & TV</em></strong>
+      <!-- A NEW PLATFORM THAT GIVES POWER TO AUDIENCES & FILMMAKERS TO MAKE MOVIES
         THEY WANT TO SEE.  -->
-      </h2>
-      <h3>COMING SOON</h3>
-    </header>
+    </h2>
+    <h3>COMING SOON</h3>
+  </header>
 
-    <form action="https://world.us11.list-manage.com/subscribe/post?u=9d1a06053197165f9f4a88e1c&amp;id=a53c589f1e&amp;f_id=00179fe0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-      <div id="mc_embed_signup_scroll">
-            <h4>Sign up for early access</h4>
-           <div class="mc-field-group"><label for="mce-EMAIL">
-            <!-- <span class="asterisk">*</span> -->
-          </label>
-          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" placeholder="Email Address"><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+  <form
+    action="https://world.us11.list-manage.com/subscribe/post?u=9d1a06053197165f9f4a88e1c&amp;id=a53c589f1e&amp;f_id=00179fe0f0"
+    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+    <div id="mc_embed_signup_scroll">
+      <h4>Sign up for early access</h4>
+      <div class="mc-field-group"><label for="mce-EMAIL">
+          <!-- <span class="asterisk">*</span> -->
+        </label>
+        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""
+          placeholder="Email Address"><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+      </div>
       <div id="mce-responses" class="clearfalse">
-          <div class="response" id="mce-error-response" style="display: none;"></div>
-          <div class="response" id="mce-success-response" style="display: none;"></div>
-      </div><div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_9d1a06053197165f9f4a88e1c_a53c589f1e" tabindex="-1" value=""></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="cta-button" value="Subscribe"></div>
-  </div>
-</form>
-<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]=EMAIL;ftypes[0]=merge;,fnames[1]=FNAME;ftypes[1]=merge;,fnames[2]=LNAME;ftypes[2]=merge;,fnames[3]=ADDRESS;ftypes[3]=merge;,fnames[4]=PHONE;ftypes[4]=merge;,fnames[5]=BIRTHDAY;ftypes[5]=merge;false}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <div class="response" id="mce-error-response" style="display: none;"></div>
+        <div class="response" id="mce-success-response" style="display: none;"></div>
+      </div>
+      <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text"
+          name="b_9d1a06053197165f9f4a88e1c_a53c589f1e" tabindex="-1" value=""></div>
+      <div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="cta-button"
+          value="Subscribe"></div>
+    </div>
+  </form>
+  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+  <script
+    type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = EMAIL; ftypes[0] = merge;, fnames[1] = FNAME; ftypes[1] = merge;, fnames[2] = LNAME; ftypes[2] = merge;, fnames[3] = ADDRESS; ftypes[3] = merge;, fnames[4] = PHONE; ftypes[4] = merge;, fnames[5] = BIRTHDAY; ftypes[5] = merge; false }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
 
-    <!-- <div class="container">
+  <!-- <div class="container">
       <div class="column">
         <h3>audiences 🍿</h3>
         <ul>
@@ -185,6 +214,7 @@ form {
         </ul>
         <button class="cta-button">Submit Your Project</button>
       </div> -->
-    </div>
-  </body>
+  </div>
+</body>
+
 </html>
