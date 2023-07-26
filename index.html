@@ -28,29 +28,43 @@
         font-family: Arial, sans-serif;
         background-color: black;
         color: white;
-        background: black url(curtains.png) no-repeat center -200px;
-        background-size: 120% auto;
+        background: black url(reelboost2-.jpg) no-repeat center top;/*curtains.png*/
+        background-size: 100% auto;
       }
+
+      @media (max-width:961px) {body {
+        /* tablet, landscape iPad, lo-res laptops ands desktops */
+        background-size: 200% auto;
+      }}
       header {
         text-align: center;
-        padding: 20px;
-        height: 100vh;
       }
       h1 {
         margin: 0;
         font-family: "Booster";
-        font-size: 7em;
+        font-size: 8em;
+        transform: rotate(-10deg);
+        /* margin-top: -80px; */
+        text-shadow: 5px 5px #000;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        -webkit-text-fill-color: white;
       }
-      h1 > em {
+
+      /* h1 > em {
         font-family: 'Booster-swash';
-      }
+      } */
       h2 {
         margin: 0;
-        font-size: 1.2em;
+        margin-top: 100px;
+        font-size: 2em;
         font-family: "Signika";
         font-weight: normal;
         text-transform: uppercase;
-        font-size: 2em;
+        text-shadow: 0px 0px 5px #000;
+      }
+      h2 strong {
+        font-size: 1.2em;
       }
       h3 {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -66,11 +80,15 @@
       }
       ul {
         list-style: none;
-      padding: 0;
+        padding: 0;
       }
       li {
         font-size: 1.3em;
         margin: 10px 0;
+        text-align: center;
+      }
+      li span {
+        font-size: 3em;
       }
       /* li::before {
         content: "\1F44D "; /* Thumbs Up Emoji (👍) 
@@ -85,6 +103,8 @@
         background-color: #007bff;
         color: white;
         cursor: pointer;
+        font-size: 1.5em;
+        font-weight: bold;
       }
       .cta-button:hover {
         background-color: #0056b3;
@@ -93,25 +113,25 @@
   </head>
   <body>
     <header>
-      <img src="./logo.png" style="width: 300px" />
-      <h1>Reel Booster</h1>
-      <h1><em>a</em></h1>
+      <img src="./reelboost-logo.png" style="width: 40%; max-width: 900px; min-width: 300px; margin-top: 250px;" />
+      <!-- <h1>Reel Booster</h1> -->
       <h2>
-        A New Platform <strong>Empowering Audiences & Filmmakers</strong
-        ><br />to Shape the Future of Cinema.
+        A new platform that gives <br/>
+        <em>Audiences & Filmmakers the power</em><br />
+        <strong><em>to Shape the Future of Film & TV</em></strong>
         <!-- A NEW PLATFORM THAT GIVES POWER TO AUDIENCES & FILMMAKERS TO MAKE MOVIES
         THEY WANT TO SEE.  -->
       </h2>
       <h3>COMING SOON</h3>
     </header>
-    <div class="container">
+    <!-- <div class="container">
       <div class="column">
         <h3>audiences 🍿</h3>
         <ul>
-          <li>📺 Discover and support films tailored to your interests</li>
+          <li><span>📺</span><br/>Discover and support films tailored to your interests</li>
           <li>Engage with filmmakers and influence movie development</li>
           <li>Get exclusive access to behind-the-scenes content</li>
-          <li>🤖Participate in community discussions and events</li>
+          <li>🤖<br/>Participate in community discussions and events</li>
         </ul>
         <button class="cta-button">Sign Up for Updates</button>
       </div>
@@ -119,16 +139,16 @@
         <h3>filmmakers 🎬</h3>
         <ul>
           <li>
-            📣 Pitch and promote your movie ideas directly to the audience
+            📣<br/>Pitch and promote your movie ideas directly to the audience
           </li>
           <li>
-            💰Receive valuable feedback and insights to improve your project
+            💰<br/>Receive valuable feedback and insights to improve your project
           </li>
           <li>Access funding opportunities from a passionate community</li>
-          <li>🚀Build a loyal fan base and grow your audience</li>
+          <li>🚀<br/>Build a loyal fan base and grow your audience</li>
         </ul>
         <button class="cta-button">Submit Your Project</button>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
