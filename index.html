@@ -1,244 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reel Booster</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-  <link rel="manifest" href="./site.webmanifest">
-  <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    /* Custom Font */
-    @font-face {
-      font-family: "Booster";
-      src: url("Booster.ttf") format("ttf"), url("Booster.otf") format("otf");
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: "Booster-swash";
-      src: url("Booster_swash.ttf") format("ttf"), url("Booster_swash.otf") format("otf");
-      font-weight: bold;
-      font-style: italic;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: black;
-      color: white;
-      background: black url(reelboost-bg.jpg) no-repeat center top;
-      background-size: 100% auto;
-    }
-
-    @media (max-width:961px) {
-      body {
-        /* tablet, landscape iPad, lo-res laptops ands desktops */
-        background-size: 150% auto;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reel Booster</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* Custom Font */
+      @font-face {
+        font-family: "Booster";
+        src: url("Booster.ttf") format("ttf"), url("Booster.otf") format("otf");
+        font-weight: normal;
+        font-style: normal;
       }
-    }
 
-    @media only screen and (min-width: 1600px) {
-      body {
-        /* tablet, landscape iPad, lo-res laptops ands desktops */
-        background-size: 90% auto;
+      @font-face {
+        font-family: "Booster-swash";
+        src: url("Booster_swash.ttf") format("ttf"),
+          url("Booster_swash.otf") format("otf");
+        font-weight: bold;
+        font-style: italic;
       }
-    }
 
-    header {
-      text-align: center;
-    }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+        background: black url(reelboost-bg.jpg) no-repeat center top;
+        background-size: 100% auto;
+      }
 
-    h1 {
-      margin: 0;
-      font-family: "Booster";
-      font-size: 8em;
-      transform: rotate(-10deg);
-      /* margin-top: -80px; */
-      text-shadow: 5px 5px #000;
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: black;
-      -webkit-text-fill-color: white;
-    }
+      @media (max-width: 961px) {
+        body {
+          /* tablet, landscape iPad, lo-res laptops ands desktops */
+          background-size: 150% auto;
+        }
+      }
 
-    /* h1 > em {
+      @media only screen and (min-width: 1600px) {
+        body {
+          /* tablet, landscape iPad, lo-res laptops ands desktops */
+          background-size: 90% auto;
+        }
+      }
+
+      header {
+        text-align: center;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: "Booster";
+        font-size: 8em;
+        transform: rotate(-10deg);
+        /* margin-top: -80px; */
+        text-shadow: 5px 5px #000;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        -webkit-text-fill-color: white;
+      }
+
+      /* h1 > em {
         font-family: 'Booster-swash';
       } */
-    h2 {
-      margin: 100px 5px 30px 5px;
-      font-size: 2em;
-      font-family: "Signika";
-      font-weight: normal;
-      text-transform: uppercase;
-      text-shadow: 0px 0px 5px #000;
-    }
-
-    h2 strong {
-      font-size: 1.2em;
-    }
-
-    @media (max-width:961px) {
       h2 {
-        margin: 0;
-        /* tablet, landscape iPad, lo-res laptops ands desktops */
-        font-size: 1.25em;
+        margin: 100px 5px 30px 5px;
+        font-size: 2em;
+        font-family: "Signika";
+        font-weight: normal;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 5px #000;
       }
-    }
 
-    h3 {
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-size: 3em;
-    }
+      h2 strong {
+        font-size: 1.2em;
+      }
 
-    img {
-      width: 40%; max-width: 900px; min-width: 300px; margin-top: 250px;
-      visibility: hidden;
-    }
+      @media (max-width: 961px) {
+        h2 {
+          margin: 0;
+          /* tablet, landscape iPad, lo-res laptops ands desktops */
+          font-size: 1.25em;
+        }
+      }
 
-    .column {
-      padding: 20px;
-      max-width: 400px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    li {
-      font-size: 1.3em;
-      margin: 10px 0;
-      text-align: center;
-    }
-
-    li span {
-      font-size: 3em;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin: 10px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: white;
-      cursor: pointer;
-      font-size: 1.5em;
-      font-weight: bold;
-    }
-
-    .cta-button:hover {
-      background-color: #0056b3;
-    }
-
-    h3 {
-      color: #ffc;
-      text-shadow: 0px 0px 5px #000;
-    }
-
-    @media (max-width:961px) {
       h3 {
-        font-size: 2.5em;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 3em;
       }
-    }
 
-    h4 {
-      font-size: 1.6rem;
-      margin: 10px;
-    }
+      img {
+        width: 40%;
+        max-width: 900px;
+        min-width: 300px;
+        margin-top: 250px;
+        visibility: hidden;
+      }
 
-    input[type=email] {
-      padding: 12px 20px;
-      margin: 8px 0;
-      box-sizing: border-box;
-      border-radius: 4px;
-      border: solid 1px grey;
-      width: 300px;
-    }
+      .column {
+        padding: 20px;
+        max-width: 400px;
+      }
 
-    form {
-      margin: 50px 20px;
-      text-align: center;
-    }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
 
-    p {
-      text-align: center;
-      font-size: 1.2em;
-      color: #ccc;
-      margin: 10px;
-    }
-    a {
-      color: #a8a;
-    }
-  </style>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L36BMGQHLY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+      li {
+        font-size: 1.3em;
+        margin: 10px 0;
+        text-align: center;
+      }
 
-  gtag('config', 'G-L36BMGQHLY');
-</script>
+      li span {
+        font-size: 3em;
+      }
 
-<body>
-  <header>
-    <img src="./reelboost-logo.png"  />
-    <!-- <h1>Reel Booster</h1> -->
-    <h2>
-      A new platform that gives <br />
-      <em>Audiences & Filmmakers the power</em><br />
-      <strong><em>to Shape the Future of Film & TV</em></strong>
-      <!-- A NEW PLATFORM THAT GIVES POWER TO AUDIENCES & FILMMAKERS TO MAKE MOVIES
-        THEY WANT TO SEE.  -->
-    </h2>
-    <h3>COMING SOON</h3>
-  </header>
+      .cta-button {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        font-size: 1.5em;
+        font-weight: bold;
+      }
 
-  <form
-    action="https://world.us11.list-manage.com/subscribe/post?u=9d1a06053197165f9f4a88e1c&amp;id=a53c589f1e&amp;f_id=00179fe0f0"
-    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-    <div id="mc_embed_signup_scroll">
-      <h4>Sign up for early access</h4>
-      <div class="mc-field-group"><label for="mce-EMAIL">
-          <!-- <span class="asterisk">*</span> -->
-        </label>
-        <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value=""
-          placeholder="Email Address"><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-      </div>
-      <div id="mce-responses" class="clearfalse">
-        <div class="response" id="mce-error-response" style="display: none;"></div>
-        <div class="response" id="mce-success-response" style="display: none;"></div>
-      </div>
-      <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text"
-          name="b_9d1a06053197165f9f4a88e1c_a53c589f1e" tabindex="-1" value=""></div>
-      <div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="cta-button"
-          value="Subscribe"></div>
-    </div>
-  </form>
-  <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+      .cta-button:hover {
+        background-color: #0056b3;
+      }
+
+      h3 {
+        color: #ffc;
+        text-shadow: 0px 0px 5px #000;
+      }
+
+      @media (max-width: 961px) {
+        h3 {
+          font-size: 2.5em;
+        }
+      }
+
+      h4 {
+        font-size: 1.6rem;
+        margin: 10px;
+      }
+
+      input[type="email"] {
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: solid 1px grey;
+        width: 300px;
+      }
+
+      form {
+        margin: 50px 20px;
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+        font-size: 1.2em;
+        color: #ccc;
+        margin: 10px;
+      }
+      a {
+        color: #a8a;
+      }
+    </style>
+  </head>
+  <!-- Google tag (gtag.js) -->
   <script
-    type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = EMAIL; ftypes[0] = merge;, fnames[1] = FNAME; ftypes[1] = merge;, fnames[2] = LNAME; ftypes[2] = merge;, fnames[3] = ADDRESS; ftypes[3] = merge;, fnames[4] = PHONE; ftypes[4] = merge;, fnames[5] = BIRTHDAY; ftypes[5] = merge; false }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-L36BMGQHLY"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  <!-- <div class="container">
+    gtag("config", "G-L36BMGQHLY");
+  </script>
+
+  <body>
+    <header>
+      <img src="./reelboost-logo.png" />
+      <!-- <h1>Reel Booster</h1> -->
+      <h2>
+        A new platform that gives <br />
+        <em>Audiences & Filmmakers the power</em><br />
+        <strong><em>to Shape the Future of Film & TV</em></strong>
+        <!-- A NEW PLATFORM THAT GIVES POWER TO AUDIENCES & FILMMAKERS TO MAKE MOVIES
+        THEY WANT TO SEE.  -->
+      </h2>
+      <h3>COMING SOON</h3>
+    </header>
+
+    <form
+      action="https://world.us11.list-manage.com/subscribe/post?u=9d1a06053197165f9f4a88e1c&amp;id=a53c589f1e&amp;f_id=00179fe0f0"
+      method="post"
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      class="validate"
+      target="_blank"
+    >
+      <div id="mc_embed_signup_scroll">
+        <h4>Sign up for early access</h4>
+        <div class="mc-field-group">
+          <label for="mce-EMAIL">
+            <!-- <span class="asterisk">*</span> -->
+          </label>
+          <input
+            type="email"
+            name="EMAIL"
+            class="required email"
+            id="mce-EMAIL"
+            required=""
+            value=""
+            placeholder="Email Address"
+          /><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
+        </div>
+        <div id="mce-responses" class="clearfalse">
+          <div
+            class="response"
+            id="mce-error-response"
+            style="display: none"
+          ></div>
+          <div
+            class="response"
+            id="mce-success-response"
+            style="display: none"
+          ></div>
+        </div>
+        <div aria-hidden="true" style="position: absolute; left: -5000px">
+          <input
+            type="text"
+            name="b_9d1a06053197165f9f4a88e1c_a53c589f1e"
+            tabindex="-1"
+            value=""
+          />
+        </div>
+        <div class="clear">
+          <input
+            type="submit"
+            name="subscribe"
+            id="mc-embedded-subscribe"
+            class="cta-button"
+            value="Subscribe"
+          />
+        </div>
+      </div>
+    </form>
+    <script
+      type="text/javascript"
+      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+    ></script>
+    <script type="text/javascript">
+      (function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = EMAIL; ftypes[0] = merge;, fnames[1] = FNAME; ftypes[1] = merge;, fnames[2] = LNAME; ftypes[2] = merge;, fnames[3] = ADDRESS; ftypes[3] = merge;, fnames[4] = PHONE; ftypes[4] = merge;, fnames[5] = BIRTHDAY; ftypes[5] = merge; false }(jQuery)); var $mcj = jQuery.noConflict(true);
+    </script>
+
+    <article>
+      <h3>Introducing ReelBooster</h3>
+      <h4>
+        A revolutionary startup giving creatives and audiences the power to
+        shape the future of the entertainment industry
+      </h4>
+
+      <p>
+        Amidst the Hollywood protests, where writers from WGA and actors from
+        SAG-AFTRA are fighting for equitable compensation, especially in the
+        uncertainty and disruption brought about by new advances in AI, the
+        entertainment industry stands at a critical juncture. The rise of
+        streaming services has resulted in reduced compensation for creatives,
+        who previously relied on residuals from box-office earnings and the
+        protection of their rights, including ownership of their likenesses. All
+        of these income streams are now at risk. Furthermore, the studio system
+        has become risk averse, resorting to recycling existing IPs and
+        generating lacklustre content, which has left audiences underwhelmed and
+        sent revenues plummeting. Now more than ever people crave fresh and
+        original experiences, which the studios are largely failing to deliver.
+      </p>
+      <p>
+        To address this, a groundbreaking startup has emerged to challenge the
+        status quo and inject new life into the film industry. ReelBooster is a
+        revolutionary platform on a mission to empower talented filmmakers who
+        would normally be ignored by large studios and streaming platforms, to
+        share their stories. ReelBooster aims to achieve this by offering
+        innovative funding models and fostering stronger connections with
+        targeted audiences. In turn, audiences can take a more proactive role in
+        bringing their desired films to life.
+      </p>
+      <p>
+        ReelBooster harnesses recent breakthroughs in the tech space,
+        particularly AI and Web3 (blockchain with decentralised ownership),
+        reducing the need to rely on traditional industry gatekeepers whose
+        profit-driven motives may not prioritise the interests of creatives and
+        audiences.
+      </p>
+      <p>
+        Reelbooster was founded by Carl Peterken, a seasoned tech industry
+        veteran and filmmaker with over two decades of experience building
+        engaging solutions for many organisations across the globe. Hailing from
+        New Zealand, he now spends his time between London & Los Angeles. Carl
+        has been involved in many innovative ventures, including the AI/web3
+        metaverse company Futureverse (through Altered State Machine, which
+        includes partnerships with Fifa & Muhammad Ali). He also led the
+        front-end engineering team behind NZ's much-lauded Covid response,
+        producing the Covid Tracer app. Using technology to take an active role
+        in saving lives was one of his most defining achievements.
+      </p>
+      <p>
+        Carl builds products that solve real-world problems. His passion for
+        both technology and film has driven him to found this startup.
+        Underpinning it all is his immense desire to unlock the enormous
+        creative potential in others.
+      </p>
+      <blockquote>
+        "Recent breakthroughs in the web3/blockchain space have shown us its
+        power to reduce inequality in many industries - through giving more
+        leverage to creators, not gatekeepers. With this technology, smart
+        contracts can be used to provide more transparency, filmmakers can now
+        incorporate royalty models directly, diminishing reliance on studio
+        accounting practices that have been questionable. By offering audiences
+        and investors part ownership in the produced intellectual property
+        through smart contracts, filmmakers can grant exclusive access, elicit
+        early feedback, and even grant voting rights through DAOs. These perks
+        will allow filmmakers to raise funds more quickly for their endeavours,
+        while allowing audiences to also help shape the destiny of these
+        creations.”
+      </blockquote>
+      <blockquote></blockquote>“Can’t find any interesting content from the other streaming services?
+      Imagine helping greenlight the projects you want to see from the comfort
+      of your sofa and a Smart TV remote. Imagine a future where the next Star
+      Wars is owned by the fans rather than a corporate entity?”
+    </blockquote><blockquote>
+      “If AI is used
+      correctly, it can enhance the creative process - not take away from it.
+      What differentiates humans from machines is our empathy and desire to tell
+      an engaging, compelling story. AI is merely a tool so we don’t have to do
+      all the heavy lifting ourselves and in turn it can actually help speed-up
+      creativity.”
+    </blockquote>
+    <p><strong>
+      Are you a budding filmmaker seeking to bring your passion
+      project to life? Or are you a film fan eager to play an active role in
+      supporting the content you want to see on screen? Head over to
+      www.reelbooster.world to submit your passion project or sign up for
+      updates and early access to the platform once it launches. Embrace the
+      future of filmmaking with ReelBooster!</strong></p>
+    </article>
+
+    <div class="container">
       <div class="column">
         <h3>audiences 🍿</h3>
         <ul>
-          <li><span>📺</span><br/>Discover and support films tailored to your interests</li>
+          <li>
+            <span>📺</span><br />Discover and support films tailored to your
+            interests
+          </li>
           <li>Engage with filmmakers and influence movie development</li>
           <li>Get exclusive access to behind-the-scenes content</li>
-          <li>🤖<br/>Participate in community discussions and events</li>
+          <li>🤖<br />Participate in community discussions and events</li>
         </ul>
         <button class="cta-button">Sign Up for Updates</button>
       </div>
@@ -246,22 +410,34 @@
         <h3>filmmakers 🎬</h3>
         <ul>
           <li>
-            📣<br/>Pitch and promote your movie ideas directly to the audience
+            📣<br />Pitch and promote your movie ideas directly to the audience
           </li>
           <li>
-            💰<br/>Receive valuable feedback and insights to improve your project
+            💰<br />Receive valuable feedback and insights to improve your
+            project
           </li>
           <li>Access funding opportunities from a passionate community</li>
-          <li>🚀<br/>Build a loyal fan base and grow your audience</li>
+          <li>🚀<br />Build a loyal fan base and grow your audience</li>
         </ul>
         <button class="cta-button">Submit Your Project</button>
-      </div> -->
-  </div>
-  <div style="padding-bottom: 100px;">
-  <p>Are you a filmmaker with a project you'd like to submit?</p>
-     <p>Or do you simply want to know more? </p>
-     <p><em>Reach out to us directly at <a href="mailto:hello@reelbooster.world">hello@reelbooster.world</a></em></p>
-  </div>
-    </body>
-
+      </div>
+    </div>
+    <div style="padding-bottom: 100px">
+      <p>Are you a filmmaker with a project you'd like to submit?</p>
+      <p>Or do you simply want to know more?</p>
+      <p>
+        <em
+          >Reach out to us directly at
+          <a href="mailto:hello@reelbooster.world"
+            >hello@reelbooster.world</a
+          ></em
+        >
+      </p>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"
+  ></script>
 </html>
